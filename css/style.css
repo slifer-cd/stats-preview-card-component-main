@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --mian-p: hsla(0, 0%, 100%, 0.75);
+  --stat: hsla(0, 0%, 100%, 0.6);
+}
+body {
+  background-color: var(--main-bg);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+}
+.text-side {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 80%;
+  height: 100%;
+  background-color: var(--card-bg);
+  border-radius: 5px 0 0 5px;
+  padding: 50px 35px 35px 70px;
+}
+.text-side h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: -40px;
+}
+.text-side h1 span {
+  color: var(--accent);
+}
+.text-side p {
+  color: var(--mian-p);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 30px;
+}
+.text-side .stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stat {
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.stat h2 {
+  margin-bottom: 10px;
+}
+.stat h2:nth-of-type(1) {
+  text-transform: lowercase;
+}
+.stat h3 {
+  color: var(--stat);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.75px;
+  font-family: "Lexend Deca", sans-serif;
+}
+.image-side {
+  width: 50%;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/image-header-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--accent);
+  background-blend-mode: hard-light;
+  opacity: 0.6;
+  border-radius: inherit;
+}
+.last {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: whitesmoke;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.last a {
+  color: blue;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.last a:hover {
+  color: cyan;
+}
+@media screen and (max-width: 1200px) {
+  .text-side h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .text-side p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .text-side {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .container {
+    height: 50%;
+  }
+  .text-side {
+    padding: 40px 25px 25px 55px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .text-side {
+    grid-template-columns: 90%;
+    padding: 35px 20px 20px 50px;
+  }
+  .text-side p {
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .text-side {
+    grid-template-columns: 95%;
+    padding: 25px 10px 10px 40px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    flex-direction: column-reverse;
+    height: 85%;
+  }
+  .text-side {
+    width: 50%;
+    border-radius: 0 0 5px 5px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  .text-side h1 {
+    font-size: 1.2rem;
+    margin-bottom: -30px;
+  }
+  .text-side p {
+    font-size: 0.72rem;
+    margin-bottom: -30px;
+  }
+  .stats-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+  }
+  .stats-container .stat h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .stats-container .stat h3 {
+    font-size: 0.6rem;
+  }
+  .image-side {
+    height: 40%;
+    border-radius: 5px 5px 0 0;
+  }
+}
+@media screen and (max-width: 531px) {
+  .text-side h1 {
+    font-size: 0.9rem;
+  }
+  .text-side p {
+    font-size: 0.6rem;
+    margin-bottom: -40px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+  .text-side {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .text-side h1 {
+    margin-bottom: -50px;
+  }
+}
